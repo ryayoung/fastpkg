@@ -1,0 +1,39 @@
+[build-system]
+# requires: list of packages needed to build my package
+requires = ["hatchling"]
+# build-backend: name of the python object that frontends use to perform build
+build-backend = "hatchling.build"
+
+[project]
+name = "fastpkg"
+version = "0.0.1"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Ryan Young", email = "dev@ryayoung.com" },
+]
+maintainers = [
+    { name = "Ryan Young", email = "dev@ryayoung.com" },
+]
+description = "Quickly initialize a new Python package, ready to upload to PyPI"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "click",
+]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.9",
+    "Operating System :: OS Independent",
+]
+keywords = [
+    "new package",
+    "cli tool"
+]
+
+[project.scripts]
+fastpkg = "fastpkg:fastpkg"
+
+# [project.urls]
+# "Homepage" = "https://github.com/ryayoung/tsopt"
+# "Web App" = "https://tsopt.net"
+
